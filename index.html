@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+    <!-- Replace the content tag with appropriate information -->
+    <meta name="description" content="DESCRIPTION META TAG">
+    <meta property="og:title" content="SOCIAL MEDIA TITLE TAG"/>
+    <meta property="og:description" content="SOCIAL MEDIA DESCRIPTION TAG TAG"/>
+    <meta property="og:url" content="URL OF THE WEBSITE"/>
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+    <meta property="og:image" content="static/image/your_banner_image.png"/>
+    <meta property="og:image:width" content="1200"/>
+    <meta property="og:image:height" content="630"/>
+
+
+    <meta name="twitter:title" content="TWITTER BANNER TITLE META TAG">
+    <meta name="twitter:description" content="TWITTER BANNER DESCRIPTION META TAG">
+    <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+    <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <!-- Keywords for your paper to be indexed by-->
+    <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <title>PointCompress3D</title>
+    <!-- <link rel="icon" type="image/x-icon" href="static/images/favicon.ico"> -->
+    <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/bulma.min.css">
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet"
+          href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="static/css/index.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+    <script defer src="static/js/fontawesome.all.min.js"></script>
+    <script src="static/js/bulma-carousel.min.js"></script>
+    <script src="static/js/bulma-slider.min.js"></script>
+    <script src="static/js/index.js"></script>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+
+
+<section class="hero">
+    <div class="hero-body">
+        <div class="container is-max-desktop">
+            <div class="columns is-centered">
+                <div class="column has-text-centered">
+                    <h1 class="title is-4 publication-title">PointCompress3D - A Point Cloud Compression Framework for
+                        Roadside LiDARs in Intelligent Transportation Systems </h1>
+                    <!-- <div class="is-size-5 publication-authors">
+                      Paper authors
+                      <span class="author-block">
+                        <a href="FIRST AUTHOR PERSONAL LINK" target="_blank">First Author</a><sup>*</sup>,</span>
+                        <span class="author-block">
+                          <a href="SECOND AUTHOR PERSONAL LINK" target="_blank">Second Author</a><sup>*</sup>,</span>
+                          <span class="author-block">
+                            <a href="THIRD AUTHOR PERSONAL LINK" target="_blank">Third Author</a>
+                          </span>
+                          </div> -->
+
+                    <!-- <div class="is-size-5 publication-authors">
+                      <span class="author-block">Institution Name<br>Conferance name and year</span>
+                      <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
+                    </div> -->
+
+                    <div class="column has-text-centered">
+                        <div class="publication-links">
+                            <!-- <span class="link-block">
+                              <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
+                              class="external-link button is-normal is-rounded is-dark">
+                                <span class="icon">
+                                <i class="fas fa-file-pdf"></i>
+                                </span>
+                                <span>Paper</span>
+                              </a>
+                            </span> -->
+
+                            <!-- Supplementary PDF link -->
+                            <!-- <span class="link-block">
+                              <a href="static/pdfs/supplementary_material.pdf" target="_blank"
+                              class="external-link button is-normal is-rounded is-dark">
+                              <span class="icon">
+                                <i class="fas fa-file-pdf"></i>
+                              </span>
+                              <span>Supplementary</span>
+                              </a>
+                            </span> -->
+
+                            <!-- Github link -->
+                            <span class="link-block">
+                    <a href="https://github.com/pointcompress3d/pointcompress3d" target="_blank"
+                       class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                    </a>
+                  </span>
+
+                            <!-- Dataset link -->
+                            <span class="link-block">
+                    <a href="https://innovation-mobility.com/tumtraf-dataset" target="_blank"
+                       class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fa fa-database"></i>
+                    </span>
+                    <span>Dataset</span>
+                    </a>
+                  </span>
+
+                            <!-- ArXiv abstract Link -->
+                            <span class="link-block">
+                              <a href="https://arxiv.org/pdf/2402.00000.pdf" target="_blank"
+                                 class="external-link button is-normal is-rounded is-dark">
+                              <span class="icon">
+                                <i class="ai ai-arxiv"></i>
+                              </span>
+                              <span>arXiv</span>
+                              </a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- title figure -->
+<section class="hero teaser">
+    <div class="container is-8">
+        <div class="hero-body">
+            <div class="item">
+                <img src="static/images/compression_architecture.jpg" alt="title_figure"/>
+                <h5>Visualization of our point cloud compression and streaming pipeline, showcasing raw LiDAR point clouds on the
+                    left, progressing through preprocessing, compression, storage, training, and 3D object detection, merging in the streaming
+                    of compressed point clouds with 3D detection results</h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Overview  -->
+<section class="section hero is-light">
+    <div class="container is-max-desktop">
+        <div class="columns">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Overview</h2>
+                <div class="content">
+                    <strong>PointCompress3D</strong> is the first point cloud compression framework for roadside LiDARs.
+                    With this framework you can select a point cloud compression algorithm to store roadside point clouds
+                    efficiently and stream them in real-time using the state-of-the-art loosy and lossless compression algorithms.<br><br>
+                    In summary:
+                    <ul>
+                        <li> We propose a point cloud compression framework for roadside infrastructure LiDAR sensors and a dev-kit.</li>
+                        <li> We provide an in-depth comparison of state-of-the-art compression methods on the SemanticKITTI, Ford and <strong>TUMTraf dataset family</strong>.</li>
+                        <li> We extend existing compression methods to make them compatible with our roadside Ouster LiDAR sensors</li>
+                        <li> We perform extensive experiments and ablation studies on our real <strong>TUMTraf Intersection</strong> and <strong>TUMTraf V2X Coop. Perception</strong> dataset and evaluate six metrics.</li>
+                        <li> We open-source our framework, which contains the point cloud projection and compression module and provide a project website with video results.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End overview -->
+
+<section class="section hero">
+    <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+            <div class="column is-four-fifths">
+                <h2 class="title is-3">Abstract</h2>
+                <div class="content has-text-justified">
+                    <p>
+                        Efficient management of point cloud data is mandatory within the field of intelligent transport systems.
+                    Requirements to efficiently store, stream, and do object detection towards the point cloud data are demanded 
+                    in a real-time manner. To address this challenge, three state-of-the-art compression methods are explored 
+                    and evaluated using our real-world-based TUMTraf dataset family. We achieve a frame rate of 10 FPS while 
+                    maintaining compression size below 250 Kb and keeping the performance of the object detection par with the 
+                    original data. In this work, we present a comprehensive assessment of each method, outlining their
+                    efficacy and suitability for practical implementation. Future work includes the deployment on the live system. 
+                    Finally, we provide code, weights, and visualization results on our website: <a href="https://pointcompress3d.github.io">https://pointcompress3d.github.io</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--<section class="section hero is-light">-->
+<!--    <div class="container is-max-desktop">-->
+<!--        <div class="columns">-->
+<!--            <div class="column is-four-fifths">-->
+
+<!-- Qualitative Results  -->
+<section class="section hero teaser">
+    <div class="container is-8">
+        <h2 class="title is-3 has-text-centered">Qualitative Results</h2>
+        <div class="hero-body">
+            <div class="item">
+                <img src="static/images/qualitative_results.jpg" alt="title_figure"/>
+                <h5 class="is-3 has-text-centered">Qualitative results on our TUMTraf Intersection dataset. From left to right: a) Side view of a truck and a car in the
+                    original point cloud. b) Experiment E1: Compressed point cloud with a subsampling distance of 3.0 and a minimum kernel
+                    radius of 1.5. c) Experiment E3: Compressed point cloud with a subsampling distance of 1.0 and a minimum kernel radius
+                    of 1.2. Both compressed images are generated with max. 30,000 points and a grid size of [40, 40, 15] m.</h5>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Ablation Studies  -->
+<section class="section hero teaser">
+    <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Ablation Studies</h2>
+        <div class="item">
+            <img src="static/images/minimum_kernel_radius.jpg" alt="title_figure"/>
+            <h5 class="is-3 has-text-centered">Adjusting the minimum kernel radius parameters by 0.5 times and 2 times the original value, respectively.</h5>
+        </div>
+    </div>
+</section>
+
+<section class="hero teaser">
+    <div class="container is-max-desktop">
+        <div class="item">
+            <img src="static/images/kernel_radius_encoding_decoding.jpg" alt="title_figure"/>
+            <h5 class="is-3 has-text-centered">We set the kernel radius in encoding block to 10 and 0.05 (top row) while keeping the decoding block values constant at 0.05. Subsequently, we set kernel radius in the decoding block to 1 and 0.01 (bottom row) while keeping the encoding block values constant at 1.0.</h5>    
+        </div>
+        
+    </div>
+</section>
+
+<section class="hero teaser">
+    <div class="container is-max-desktop">
+        <div class="item">
+            <img src="static/images/ablation_study_number_points.jpg" alt="title_figure"/>
+        </div>
+        <h5 class="is-3 has-text-centered">Visualization of ablation study for the max. number of points. The point cloud shows a side view of a truck and a
+            car with 5,000, 12,500, 25,000, 50,000, 100,000, and 200,000 points.</h5>
+    </div>
+</section>
+
+
+<section class="hero">
+    <div class="hero">
+        <h3 class="title is-8 has-text-centered">Quantitative Results</h3>
+        <div class="container is-centered">
+            <table class="table is-centered center">
+                <thead>
+                <tr>
+                    <th colspan="2">Grid Size</th>
+                    <th colspan="2">Max. Points</th>
+                    <th colspan="2">Enc. (ms)</th>
+                    <th colspan="2">Dec. (ms)</th>
+                    <th colspan="2">Enc. VRAM (GB)</th>
+                    <th colspan="2">Dec. VRAM (GB)</th>
+                    <th colspan="2">PSNR d1</th>
+                    <th colspan="2">PSNR d2</th>
+                    <th colspan="2">BPP</th>
+                    <th colspan="2">mAP 3D</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>8x8x3</td>
+                    <td>5,000</td>
+                    <td>100</td>
+                    <td>26.0</td>
+                    <td>1.5</td>
+                    <td>1.7</td>
+                    <td>-5.12</td>
+                    <td>0.35</td>
+                    <td>1.11</td>
+                    <td>1.84</td>
+                </tr>
+                </tbody>
+            </table>
+            <h5 class="is-3 has-text-centered">
+                Parameter tuning for DEPOCO on the max. number of points and the grid size. We use the TUMTraf Intersection dataset to find the best parameters and evaluate the compression method on the TUMTraf V2X Cooperative Perception dataset.
+            </h5>
+        </div>
+    </div>
+</section>
+<!--BibTex citation -->
+<!-- <section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>BibTex Code Here</code></pre>
+  </div>
+</section> -->
+<!--End BibTex citation -->
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="columns is-centered">
+            <div class="column is-8">
+                <div class="content has-text-centered">
+                    <p>
+                        The <strong>PointCompress3D</strong> framework is licensed under <a
+                            href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA
+                        4.0</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+<!-- End of Statcounter Code -->
+
+</body>
+</html>
