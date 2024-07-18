@@ -55,83 +55,17 @@
                 <div class="column has-text-centered">
                     <h1 class="title is-4 publication-title">PointCompress3D - A Point Cloud Compression Framework for
                         Roadside LiDARs in Intelligent Transportation Systems </h1>
-                    <div class="is-size-5 publication-authors">
-<!--                      Paper authors-->
-                      <span class="author-block">
-                        <a href="https://walzimmer.github.io/website" target="_blank">Walter Zimmer</a><sup>*</sup>,</span>
-                        <span class="author-block">
-                          <a href="https://www.linkedin.com/in/ramandika-pranamulia-825653b6" target="_blank">Ramandika Pranamulia</a><sup>*</sup>,
-                        </span>
-                        <span class="author-block">
-                          <a href="https://www.ce.cit.tum.de/air/people/xingcheng-zhou-msc/" target="_blank">Xingcheng Zhou</a>,
-                        </span>
-                        <span class="author-block">
-                          <a href="https://scholar.google.com/citations?user=Bcohc-oAAAAJ&hl" target="_blank">Mingyu Liu</a>,
-                        </span>
-                        <span class="author-block">
-                          <a href="https://www.ce.cit.tum.de/air/people/prof-dr-ing-habil-alois-knoll/" target="_blank">Alois C. Knoll</a>
-                        </span>
-                    </div>
-
-                    <div class="is-size-5 publication-authors">
-                      <span class="author-block">Technical University of Munich (TUM), Germany</span>
-                      <span class="eql-cntrb"><small><br><sup>*</sup>Indicates Equal Contribution</small></span>
-                    </div>
-
                     <div class="column has-text-centered">
                         <div class="publication-links">
-                            <!-- <span class="link-block">
-                              <a href="https://arxiv.org/pdf/<ARXIV PAPER ID>.pdf" target="_blank"
-                              class="external-link button is-normal is-rounded is-dark">
-                                <span class="icon">
-                                <i class="fas fa-file-pdf"></i>
-                                </span>
-                                <span>Paper</span>
-                              </a>
-                            </span> -->
-
-                            <!-- Supplementary PDF link -->
-                            <!-- <span class="link-block">
-                              <a href="static/pdfs/supplementary_material.pdf" target="_blank"
-                              class="external-link button is-normal is-rounded is-dark">
-                              <span class="icon">
-                                <i class="fas fa-file-pdf"></i>
-                              </span>
-                              <span>Supplementary</span>
-                              </a>
-                            </span> -->
-
                             <!-- Github link -->
                             <span class="link-block">
-                    <a href="https://github.com/pointcompress3d/pointcompress3d" target="_blank"
-                       class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                    <span>Code</span>
-                    </a>
-                  </span>
-
-                            <!-- Dataset link -->
-                            <span class="link-block">
-                    <a href="https://innovation-mobility.com/tumtraf-dataset" target="_blank"
-                       class="external-link button is-normal is-rounded is-dark">
-                    <span class="icon">
-                      <i class="fa fa-database"></i>
-                    </span>
-                    <span>Dataset</span>
-                    </a>
-                  </span>
-
-                            <!-- ArXiv abstract Link -->
-                            <span class="link-block">
-                              <a href="https://arxiv.org/abs/2405.01750" target="_blank"
-                                 class="external-link button is-normal is-rounded is-dark">
-                              <span class="icon">
-                                <i class="ai ai-arxiv"></i>
-                              </span>
-                              <span>arXiv</span>
-                              </a>
+                                <a href="https://github.com/pointcompress3d/pointcompress3d" target="_blank"
+                                   class="external-link button is-normal is-rounded is-dark">
+                                    <span class="icon">
+                                        <i class="fab fa-github"></i>
+                                    </span>
+                                    <span>Code</span>
+                                </a>
                             </span>
                         </div>
                     </div>
@@ -147,9 +81,11 @@
         <div class="hero-body">
             <div class="item">
                 <img src="static/images/compression_architecture.jpg" alt="title_figure"/>
-                <h5>Visualization of our point cloud compression and streaming pipeline, showcasing raw LiDAR point clouds on the
-                    left, progressing through preprocessing, compression, storage, training, and 3D object detection, merging in the streaming
-                    of compressed point clouds with 3D detection results.</h5>
+                <h5>Visualization of the processing pipeline of our PointCompress3D point cloud compression and
+                    streaming framework. Our framework takes raw roadside LiDAR point clouds as input, processes them,
+                    and outputs compressed point clouds to facilitate downstream application tasks like 3D object
+                    detection, data storage, and real-time point cloud streaming on an ITS test bed for autonomous
+                    driving.</h5>
             </div>
         </div>
     </div>
@@ -164,15 +100,26 @@
                 <h2 class="title is-3">Overview</h2>
                 <div class="content">
                     <strong>PointCompress3D</strong> is the first point cloud compression framework for roadside LiDARs.
-                    With this framework you can select a point cloud compression algorithm to store roadside point clouds
-                    efficiently and stream them in real-time using the state-of-the-art loosy and lossless compression algorithms.<br><br>
+                    With this framework you can select a point cloud compression algorithm to store roadside point
+                    clouds
+                    efficiently and stream them in real-time using the state-of-the-art loosy and lossless compression
+                    algorithms.<br><br>
                     In summary:
                     <ul>
-                        <li> We propose a point cloud compression framework for roadside infrastructure LiDAR sensors and a dev-kit.</li>
-                        <li> We provide an in-depth comparison of state-of-the-art compression methods on the SemanticKITTI, Ford and <strong>TUMTraf dataset family</strong>.</li>
-                        <li> We extend existing compression methods to make them compatible with our roadside Ouster LiDAR sensors</li>
-                        <li> We perform extensive experiments and ablation studies on our real <strong>TUMTraf Intersection</strong> and <strong>TUMTraf V2X Coop. Perception</strong> dataset and evaluate six metrics.</li>
-                        <li> We open-source our framework, which contains the point cloud projection and compression module and provide a project website with video results.</li>
+                        <li> We propose a point cloud compression framework for roadside infrastructure LiDAR sensors.
+                        </li>
+                        <li> We provide an in-depth comparison of state-of-the-art compression methods on the
+                            SemanticKITTI, Ford and TUMTraf dataset family.
+                        </li>
+                        <li> We extend existing compression methods to make them compatible with our roadside Ouster
+                            LiDAR sensors.
+                        </li>
+                        <li> We perform extensive experiments and ablation studies on the TUMTraf Intersection and
+                            TUMTraf V2X Coop. Perception dataset.
+                        </li>
+                        <li> We open-source our framework, which contains the point cloud projection and compression
+                            module and provide a project website with video results.
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -187,14 +134,21 @@
             <div class="column is-four-fifths">
                 <h2 class="title is-3">Abstract</h2>
                 <div class="content has-text-justified">
-                    <p>Efficient management of point cloud data is mandatory within the field of intelligent transport systems.
-                    Requirements to efficiently store, stream, and do object detection towards the point cloud data are demanded 
-                    in a real-time manner. To address this challenge, three state-of-the-art compression methods are explored 
-                    and evaluated using our real-world-based TUMTraf dataset family. We achieve a frame rate of 10 FPS while 
-                    maintaining compression size below 250 Kb and keeping the performance of the object detection par with the 
-                    original data. In this work, we present a comprehensive assessment of each method, outlining their
-                    efficacy and suitability for practical implementation. Future work includes the deployment on the live system. 
-                    Finally, we provide code, weights, and visualization results on our website: <a href="https://pointcompress3d.github.io">https://pointcompress3d.github.io</a>.</p>
+                    <p>In the context of Intelligent Transportation Systems (ITS), efficient data compression is crucial
+                        for managing large-scale point cloud data acquired by roadside LiDAR sensors. The demand for
+                        efficient storage, streaming, and real-time object detection capabilities for point cloud data
+                        is substantial. This work introduces PointCompress3D, a novel point cloud compression framework
+                        explicitly tailored for roadside LiDARs. Our framework addresses the challenges of compressing
+                        high-resolution point clouds in real time while maintaining accuracy and compatibility with
+                        roadside LiDAR sensors. We adapt, extend, and integrate three cutting-edge compression methods
+                        and evaluate them on the real-world TUM Traffic datasets. Moreover, we deploy our compression
+                        framework on a real ITS test bed for autonomous driving and test it under real traffic
+                        conditions. After fine-tuning, we achieve a frame rate of 10 FPS while keeping compression sizes
+                        below 105 Kb, a reduction of 50 times, and maintaining object detection performance on par with
+                        the original data. In extensive experiments and ablation studies, we finally achieved a PSNR d2
+                        of 94.46 and a BPP of 6.54 on the TUM Traffic datasets. The code is available on our project
+                        website: <a
+                                href="https://pointcompress3d.github.io">https://pointcompress3d.github.io</a>.</p>
                 </div>
             </div>
         </div>
@@ -214,10 +168,13 @@
         <div class="hero-body">
             <div class="item">
                 <img src="static/images/qualitative_results.jpg" alt="title_figure"/>
-                <h5 class="is-3 has-text-centered">Qualitative results on our TUMTraf Intersection dataset. From left to right: a) Side view of a truck and a car in the
-                    original point cloud. b) Experiment E1: Compressed point cloud with a subsampling distance of 3.0 and a minimum kernel
-                    radius of 1.5. c) Experiment E3: Compressed point cloud with a subsampling distance of 1.0 and a minimum kernel radius
-                    of 1.2. Both compressed images are generated with max. 30,000 points and a grid size of [40, 40, 15] m.</h5>
+                <h5 class="is-3 has-text-centered">Qualitative results on the TUMTraf Intersection dataset. From left to
+                    right: a) Side view of a truck and a van in the
+                    original point cloud. b) Experiment E1: Reconstructed point cloud with a subsampling distance of 3.0
+                    and a minimum kernel
+                    radius of 1.5. c) Experiment E3: Reconstructed point cloud with a subsampling distance of 1.0 and a
+                    minimum kernel radius of 1.2. Both compressed point cloud projection images are generated with max. 30,000 points and a grid size of 40x40x15
+                    m.</h5>
             </div>
         </div>
     </div>
@@ -229,7 +186,8 @@
             <video poster="" autoplay controls muted loop height="100%">
                 <source src="static/videos/original_vs_compressed_highway.mp4" type="video/mp4">
             </video>
-            <h5 class="is-3 has-text-centered">Left: Stream of original point clouds of the TUMTraf A9 Highway dataset. Right: Compressed stream of point clouds.</h5>
+            <h5 class="is-3 has-text-centered">Left: Stream of original point clouds of the TUMTraf A9 Highway dataset.
+                Right: Reconstructed stream of point clouds.</h5>
         </div>
     </div>
 </section>
@@ -240,7 +198,8 @@
         <h2 class="title is-3 has-text-centered">Ablation Studies</h2>
         <div class="item">
             <img src="static/images/minimum_kernel_radius.jpg" alt="title_figure"/>
-            <h5 class="is-3 has-text-centered">Adjusting the minimum kernel radius parameters by 0.5 times and 2 times the original value, respectively.</h5>
+            <h5 class="is-3 has-text-centered">Adjusting the minimum kernel radius parameters by 0.5 times and 2 times
+                the original value, respectively.</h5>
         </div>
     </div>
 </section>
@@ -249,9 +208,11 @@
     <div class="container is-max-desktop">
         <div class="item">
             <img src="static/images/kernel_radius_encoding_decoding.jpg" alt="title_figure"/>
-            <h5 class="is-3 has-text-centered">We set the kernel radius in encoding block to 10 and 0.05 (top row) while keeping the decoding block values constant at 0.05. Subsequently, we set kernel radius in the decoding block to 1 and 0.01 (bottom row) while keeping the encoding block values constant at 1.0.</h5>    
+            <h5 class="is-3 has-text-centered">We set the kernel radius in encoding block to 10 and 0.05 (top row) while
+                keeping the decoding block values constant at 0.05. Subsequently, we set kernel radius in the decoding
+                block to 1 and 0.01 (bottom row) while keeping the encoding block values constant at 1.0.</h5>
         </div>
-        
+
     </div>
 </section>
 
@@ -260,8 +221,9 @@
         <div class="item">
             <img src="static/images/ablation_study_number_points.jpg" alt="title_figure"/>
         </div>
-        <h5 class="is-3 has-text-centered">Visualization of ablation study for the max. number of points. The point cloud shows a side view of a truck and a
-            car with 5,000, 12,500, 25,000, 50,000, 100,000, and 200,000 points.</h5>
+        <h5 class="is-3 has-text-centered">Visualization of ablation study for the max. number of points. The point
+            cloud shows a side view of a truck and a
+            van with 5,000, 12,500, 25,000, 50,000, 100,000, and 200,000 points.</h5>
     </div>
 </section>
 
@@ -271,7 +233,8 @@
             <video poster="" autoplay controls muted loop height="100%">
                 <source src="static/videos/original_vs_compressed_intersection_r02_s02.mp4" type="video/mp4">
             </video>
-            <h5 class="is-3 has-text-centered">Left: Stream of original point clouds of the TUMTraf Intersection dataset. Right: Compressed stream of point clouds.</h5>
+            <h5 class="is-3 has-text-centered">Left: Stream of original point clouds of the TUMTraf Intersection
+                dataset. Right: Reconstructed stream of point clouds.</h5>
         </div>
     </div>
 </section>
@@ -414,7 +377,9 @@
             </tbody>
         </table>
         <h5 class="is-3 has-text-centered">
-            Parameter tuning for DEPOCO on the max. number of points and the grid size. We use the TUMTraf Intersection dataset to find the best parameters and evaluate the compression method on the TUMTraf V2X Cooperative Perception dataset.
+            Parameter tuning for DEPOCO on the max. number of points and the grid size. We use the TUMTraf Intersection
+            dataset to find the best parameters and evaluate the compression method on the TUMTraf V2X Cooperative
+            Perception dataset.
         </h5>
     </div>
 </section>
